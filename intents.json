@@ -1,0 +1,103 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["hi", "hello", "hey"],
+      "responses": [
+        "Hey there! Need anime suggestions?",
+        "Hi! What anime genre are you into?"
+      ]
+    },
+
+    {
+      "tag": "ask_genre",
+      "patterns": [
+        "recommend (.*) anime",
+        "give me a (.*) anime",
+        "suggest a (.*) show",
+        "i want a (.*) anime",
+        "looking for a (.*) anime"
+      ],
+      "responses": [
+        "If you like {0} anime, you might enjoy: {recommendation}",
+        "For {0}, I recommend: {recommendation}",
+        "{0} anime? Try this one: {recommendation}"
+      ]
+    },
+
+    {
+      "tag": "genres",
+      "patterns": ["action", "romance", "comedy", "fantasy", "isekai", "slice of life", "horror", "mecha", "sports", "psychological"],
+      "responses": [
+        "Ohh {0}? I've got great picks—just ask me: 'recommend {0} anime'.",
+        "{0}? Nice choice. Want a recommendation?",
+        "{0} anime hits different! Say 'recommend {0} anime'."
+      ]
+    },
+
+    {
+      "tag": "specific_request",
+      "patterns": [
+        "i like (.*)",
+        "my favourite genre is (.*)",
+        "i enjoy (.*) shows"
+      ],
+      "responses": [
+        "Nice! I'll remember you like {0}. Ask for a recommendation anytime!",
+        "{0} genre—solid taste. Want a list of recommendations?",
+        "Got it! {0} shows are awesome."
+      ]
+    },
+
+    {
+      "tag": "top_anime",
+      "patterns": [
+        "top anime",
+        "best anime",
+        "popular anime",
+        "good anime to watch"
+      ],
+      "responses": [
+        "Top anime right now: Chainsaw Man, Jujutsu Kaisen, Demon Slayer, Attack on Titan.",
+        "Some of the best anime ever: Fullmetal Alchemist Brotherhood, Steins;Gate, Gintama, Hunter x Hunter.",
+        "Popular choices: My Hero Academia, AOT, One Piece, Tokyo Ghoul."
+      ]
+    },
+
+    {
+      "tag": "favourite_anime",
+      "patterns": [
+        "my favourite anime is (.*)",
+        "i love (.*)",
+        "(.*) is my favourite anime"
+      ],
+      "responses": [
+        "Nice! I’ll remember that your favorite anime is {0}.",
+        "Ooo {0} is hype! Adding that to your preferences!"
+      ]
+    },
+
+    {
+      "tag": "memory_recall",
+      "patterns": [
+        "what anime do i like",
+        "what's my favourite anime",
+        "what's my favorite anime",
+        "what genre do i like"
+      ],
+      "responses": [
+        "You told me you liked {memory}.",
+        "From my memory, your taste is: {memory}."
+      ]
+    },
+
+    {
+      "tag": "goodbye",
+      "patterns": ["bye", "see you", "sayounara", "goodbye"],
+      "responses": [
+        "See you later! Come back for more anime recs!",
+        "Bye! Go watch something cool."
+      ]
+    }
+  ]
+}
